@@ -35,9 +35,7 @@ module.exports = (robot) ->
       robot.send { room: msg.message?.user?.name }, emit
     else
       msg.emote "letter på hatten."
-      msg.send "Goddag. Jeg hedder Bitzau, og jeg er jo heller ikke ægte butler."
-      msg.send "Jeg er søn af en sværdkæmper og har endnu ikke taget mig en uddannelse (eller klippet mit hår)."
-      msg.send "Tjenesterne inkluderer:"
+      msg.send "Goddag. Jeg hedder Bitzau, og jeg er jo heller ikke ægte butler.\nJeg er søn af en sværdkæmper og har endnu ikke taget mig en uddannelse (eller klippet mit hår).\nMine tjenester inkluderer:"
       msg.send emit
 
 getHelpCommands = (robot) ->
