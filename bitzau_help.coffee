@@ -34,9 +34,9 @@ module.exports = (robot) ->
       msg.reply 'svarede i privaten!'
       robot.send { room: msg.message?.user?.name }, emit
     else
-      msg.emote "letter på hatten."
-      msg.send "Goddag. Jeg hedder Bitzau, og jeg er jo heller ikke ægte butler."
-      msg.send "Jeg er søn af en sværdkæmper og har endnu ikke taget mig en uddannelse (eller klippet mit hår)."
+      msg.emote "letter pÃ¥ hatten."
+      msg.send "Goddag. Jeg hedder Bitzau, og jeg er jo heller ikke Ã¦gte butler."
+      msg.send "Jeg er sÃ¸n af en svÃ¦rdkÃ¦mper og har endnu ikke taget mig en uddannelse (eller klippet mit hÃ¥r)."
       msg.send "Tjenesterne inkluderer:"
       msg.send emit
 
