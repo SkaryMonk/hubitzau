@@ -17,7 +17,7 @@
 
 module.exports = (robot) ->
 
-  robot.respond /help(?:\s+(.*))?$/i, (msg) ->
+  robot.respond /hilfe(?:\s+(.*))?$/i, (msg) ->
     cmds = getHelpCommands(robot)
     filter = msg.match[1]
 
@@ -25,15 +25,19 @@ module.exports = (robot) ->
       cmds = cmds.filter (cmd) ->
         cmd.match new RegExp(filter, 'i')
       if cmds.length is 0
-        msg.send "No available commands match #{filter}"
+        msg.send "Der er slet ikke nogen kommando ved navn #{filter}!"
         return
 
     emit = cmds.join '\n'
 
     if process.env.HUBOT_HELP_REPLY_IN_PRIVATE and msg.message?.user?.name?
-      msg.reply 'replied to you in private!'
+      msg.reply 'svarede i privaten!'
       robot.send { room: msg.message?.user?.name }, emit
     else
+      msg.emote "letter på hatten."
+      msg.send "Goddag. Jeg hedder Bitzau, og jeg er jo heller ikke ægte butler."
+      msg.send "Jeg er søn af en sværdkæmper og har endnu ikke taget mig en uddannelse (eller klippet mit hår)."
+      msg.send "Tjenesterne inkluderer:"
       msg.send emit
 
 getHelpCommands = (robot) ->
