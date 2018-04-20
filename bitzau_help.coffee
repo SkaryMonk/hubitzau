@@ -2,8 +2,8 @@
 #   Generates help commands for Hubot.
 #
 # Commands:
-#   hubot help - Displays all of the help commands that this bot knows about.
-#   hubot help <query> - Displays all help commands that match <query>.
+#   hubot hilfe - Viser alt, hvad botten kan finde ud af at svare på
+#   hubot hilfe <query> - Viser hilfe til alle kommandoer, der har med <query> at gøre.
 #
 # URLS:
 #   /hubot/help
